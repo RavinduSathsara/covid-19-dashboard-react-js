@@ -7,7 +7,6 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Title from "../Title/Title";
-import Button from "@material-ui/core/Button";
 import LinearDeterminate from "../LinearDeterminate/LinearDeterminate";
 // Generate Order Data
 
@@ -136,7 +135,18 @@ export default function PcrTests() {
                 {items.data.daily_pcr_testing_data[4].pcr_count}
               </TableCell>
             </TableRow>
-            <Button color="primary">Show another </Button>
+            <TableRow>
+              <TableCell>{items.data.daily_pcr_testing_data[5].date}</TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[5].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>{items.data.daily_pcr_testing_data[6].date}</TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[6].pcr_count}
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </React.Fragment>
