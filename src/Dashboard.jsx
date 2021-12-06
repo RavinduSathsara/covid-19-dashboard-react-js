@@ -24,8 +24,8 @@ import {
   secondaryListItems,
 } from "./components/listItems/listItems";
 import Chart from "./components/Chart/Chart";
-import Deposits from "./components/Deposits/Deposits";
-import Orders from "./components/Orders/Orders";
+import Deposits from "./components/CasesCard/CasesCard";
+import PcrTests from "./components/PcrTests/PcrTests";
 
 function Copyright() {
   return (
@@ -204,7 +204,7 @@ export default function Dashboard() {
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <Orders />
+                <PcrTests />
               </Paper>
             </Grid>
           </Grid>
