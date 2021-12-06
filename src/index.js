@@ -1,10 +1,12 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
 import Dashboard from "./Dashboard";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <Dashboard />
-  </React.StrictMode>,
+  </BrowserRouter>,
+
   document.getElementById("root")
 );
