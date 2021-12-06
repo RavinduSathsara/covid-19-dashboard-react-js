@@ -21,8 +21,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PcrTests() {
-  const [date, setDate] = useState(0);
-
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState({
@@ -116,13 +114,19 @@ export default function PcrTests() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>{items.data.daily_pcr_testing_data[0].date}</TableCell>
+              <TableCell>
+                {" "}
+                {items.data.daily_pcr_testing_data[0].date}
+              </TableCell>
               <TableCell>
                 {items.data.daily_pcr_testing_data[0].pcr_count}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>{items.data.daily_pcr_testing_data[1].date}</TableCell>
+              <TableCell>
+                {" "}
+                {items.data.daily_pcr_testing_data[1].date}
+              </TableCell>
               <TableCell>
                 {items.data.daily_pcr_testing_data[1].pcr_count}
               </TableCell>

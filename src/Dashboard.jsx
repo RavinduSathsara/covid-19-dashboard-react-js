@@ -32,7 +32,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Covid 19 Dashboard -
+        Covid 19 Dashboard - Sathsara
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -159,7 +159,7 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-            Covid 19 Dashboard
+            Covid 19 Dashboard - Sri Lanka
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
