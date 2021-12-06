@@ -66,6 +66,10 @@ export default function PcrTests() {
           date: "2021-12-06",
           pcr_count: "6191",
         },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
       ],
     },
   });
@@ -102,7 +106,7 @@ export default function PcrTests() {
   } else {
     return (
       <React.Fragment>
-        <Title>Daily Pcr Testing</Title>
+        <Title> Local Daily Pcr Testing</Title>
         <Table size="small">
           <TableHead>
             <TableRow>

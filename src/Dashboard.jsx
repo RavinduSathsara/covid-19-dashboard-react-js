@@ -32,7 +32,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Covid 19 Dashboard -
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
