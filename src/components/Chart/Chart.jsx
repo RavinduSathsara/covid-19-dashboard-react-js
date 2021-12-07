@@ -11,6 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Title from "../Title/Title";
+import DescriptionAlerts from "../DescriptionAlerts/DescriptionAlerts";
 
 export default function Chart() {
   const theme = useTheme();
@@ -61,7 +62,11 @@ export default function Chart() {
   ];
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        <DescriptionAlerts Error={error.message} />
+      </div>
+    );
   } else if (!isLoaded) {
     return (
       <div>

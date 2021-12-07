@@ -7,6 +7,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Title from "../Title/Title";
+import DescriptionAlerts from "../DescriptionAlerts/DescriptionAlerts";
 import LinearDeterminate from "../LinearDeterminate/LinearDeterminate";
 // Generate Order Data
 
@@ -142,7 +143,11 @@ export default function PcrTests() {
   }, []);
   const classes = useStyles();
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        <DescriptionAlerts Error={error.message} />
+      </div>
+    );
   } else if (!isLoaded) {
     return (
       <div>

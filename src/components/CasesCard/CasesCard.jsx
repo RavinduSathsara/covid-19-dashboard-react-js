@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import CircularProgress from "@material-ui/core/CircularProgress";
-
+import DescriptionAlerts from "../DescriptionAlerts/DescriptionAlerts";
 import Title from "../Title/Title";
 
 function preventDefault(event) {
@@ -57,7 +57,11 @@ export default function Deposits() {
       );
   }, []);
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        <DescriptionAlerts Error={error.message} />
+      </div>
+    );
   } else if (!isLoaded) {
     return (
       <div>
