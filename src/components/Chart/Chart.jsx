@@ -20,7 +20,37 @@ export default function Chart() {
   const [items, setItems] = useState({
     data: {
       update_date_time: "2021-12-04 22:04:49",
-      local_new_cases: 7400000,
+      local_new_cases: 740,
+      daily_pcr_testing_data: [
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-05",
+          pcr_count: "7975",
+        },
+        {
+          date: "2021-12-04",
+          pcr_count: "6680",
+        },
+        {
+          date: "2021-12-04",
+          pcr_count: "6680",
+        },
+        {
+          date: "2021-12-04",
+          pcr_count: "6680",
+        },
+        {
+          date: "2021-12-04",
+          pcr_count: "6680",
+        },
+        {
+          date: "2021-12-04",
+          pcr_count: "6680",
+        },
+      ],
     },
   });
 
@@ -48,16 +78,21 @@ export default function Chart() {
   function createData(time, amount) {
     return { time, amount };
   }
-
+  const monday = items.data.daily_pcr_testing_data[0].pcr_count;
+  const tuesday = items.data.daily_pcr_testing_data[1].pcr_count;
+  const wednesday = items.data.daily_pcr_testing_data[2].pcr_count;
+  const thursday = items.data.daily_pcr_testing_data[3].pcr_count;
+  const friday = items.data.daily_pcr_testing_data[4].pcr_count;
+  const saturday = items.data.daily_pcr_testing_data[5].pcr_count;
+  const sunday = items.data.daily_pcr_testing_data[6].pcr_count;
   const data = [
-    createData("0", 0),
-    createData("Sunday", 500),
-    createData("Monday", 600),
-    createData("Tuesday", 800),
-    createData("Wednesday", 1500),
-    createData("Thursday", 2000),
-    createData("Friday", 2400),
-    createData("Sunday", 2400),
+    createData("Monday", monday),
+    createData("Tuesday", tuesday),
+    createData("Wednesday", wednesday),
+    createData("Thursday", thursday),
+    createData("Friday", friday),
+    createData("Saturday", saturday),
+    createData("Sunday", sunday),
     createData("", undefined),
   ];
 
