@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import { Route, Routes } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
@@ -24,7 +25,7 @@ import {
   secondaryListItems,
 } from "./components/listItems/listItems";
 import Chart from "./components/Chart/Chart";
-import Deposits from "./components/CasesCard/CasesCard";
+import CasesCard from "./components/CasesCard/CasesCard";
 import PcrTests from "./components/PcrTests/PcrTests";
 
 function Copyright() {
@@ -168,6 +169,7 @@ export default function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
+
       <Drawer
         variant="permanent"
         classes={{
@@ -187,30 +189,64 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
+
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid>
+            {/* Chart */}{" "}
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Grid item xs={12} md={8} lg={9}>
+                    <Paper className={fixedHeightPaper}>
+                      <Chart />
+                    </Paper>
+                  </Grid>
+                }
+              />
+            </Routes>
+            {/* Recent Cases */}
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Grid item xs={12} md={4} lg={3}>
+                    <Paper className={fixedHeightPaper}>
+                      <CasesCard />
+                    </Paper>
+                  </Grid>
+                }
+              />
+            </Routes>
             {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <PcrTests />
-              </Paper>
-            </Grid>
+            <Routes>
+              <Route
+                path="/pcr_reports"
+                element={
+                  <Grid item xs={12}>
+                    <Paper className={classes.paper}>
+                      <PcrTests />
+                    </Paper>
+                  </Grid>
+                }
+              />
+            </Routes>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Grid item xs={12}>
+                    <Paper className={classes.paper}>
+                      <PcrTests />
+                    </Paper>
+                  </Grid>
+                }
+              />
+            </Routes>
           </Grid>
           <Box pt={4}>
             <Copyright />
-          </Box>
+          </Box>{" "}
         </Container>
       </main>
     </div>

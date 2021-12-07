@@ -68,6 +68,54 @@ export default function PcrTests() {
           date: "2021-12-06",
           pcr_count: "6191",
         },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
+        {
+          date: "2021-12-06",
+          pcr_count: "6191",
+        },
       ],
     },
   });
@@ -153,6 +201,56 @@ export default function PcrTests() {
               <TableCell>{items.data.daily_pcr_testing_data[6].date}</TableCell>
               <TableCell>
                 {items.data.daily_pcr_testing_data[6].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>{items.data.daily_pcr_testing_data[7].date}</TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[7].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>{items.data.daily_pcr_testing_data[8].date}</TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[8].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>{items.data.daily_pcr_testing_data[9].date}</TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[9].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[10].date}
+              </TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[10].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[11].date}
+              </TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[11].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[12].date}
+              </TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[12].pcr_count}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[13].date}
+              </TableCell>
+              <TableCell>
+                {items.data.daily_pcr_testing_data[13].pcr_count}
               </TableCell>
             </TableRow>
           </TableBody>

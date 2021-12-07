@@ -7,21 +7,30 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 
+import { Link as Show } from "react-router-dom";
 export const mainListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
+    {/* Dashbord Icon */}
+    <Show to="/" style={{ color: "inherit", textDecoration: "inherit" }}>
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />{" "}
+      </ListItem>
+    </Show>
+    {/* PCr test Icon */}
+    <Show
+      to="pcr_reports"
+      style={{ color: "inherit", textDecoration: "inherit" }}
+    >
+      <ListItem button>
+        <ListItemIcon>
+          <BarChartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Pcr Reports" />
+      </ListItem>
+    </Show>
   </div>
 );
 
