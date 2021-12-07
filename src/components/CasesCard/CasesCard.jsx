@@ -25,12 +25,13 @@ export default function Deposits() {
   const [items, setItems] = useState({
     data: {
       update_date_time: "2021-12-04 22:04:49",
-      global_new_cases: 510016,
-      global_total_cases: 249461042,
-      global_deaths: 50476,
-      global_new_deaths: 7456,
-      global_recovered: 225913434,
-      total_pcr_testing_count: 5694513,
+      local_new_cases: 741,
+      local_total_cases: 568423,
+      local_total_number_of_individuals_in_hospitals: 10170,
+      local_deaths: 14484,
+      local_new_deaths: 23,
+      local_recovered: 542688,
+      local_active_cases: 11251,
     },
   });
   const classes = useStyles();
@@ -70,13 +71,17 @@ export default function Deposits() {
   } else {
     return (
       <React.Fragment>
-        <Title>Globle Total cases</Title>
-        <Typography component="p" variant="h4">
-          {items.data.global_total_cases}
+        <Title>Local Total cases</Title>
+        <Typography component="p" variant="h5">
+          {items.data.local_total_cases}
         </Typography>
-        <Title>Globle Total deaths</Title>
-        <Typography component="p" variant="h4">
-          {items.data.global_deaths}
+        <Title>Local Total deaths</Title>
+        <Typography component="p" variant="h5">
+          {items.data.local_deaths}
+        </Typography>
+        <Title>Local new deaths</Title>
+        <Typography component="p" variant="h5">
+          {items.data.local_new_deaths}
         </Typography>
         <Typography color="textSecondary" className={classes.depositContext}>
           on {items.data.update_date_time}
