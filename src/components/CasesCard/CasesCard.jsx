@@ -71,11 +71,11 @@ export default function Deposits() {
   } else {
     return (
       <React.Fragment>
-        <Title>Local Total cases</Title>
+        <Title>Local total cases</Title>
         <Typography component="p" variant="h5">
           {items.data.local_total_cases}
         </Typography>
-        <Title>Local Total deaths</Title>
+        <Title>Local total deaths</Title>
         <Typography component="p" variant="h5">
           {items.data.local_deaths}
         </Typography>
