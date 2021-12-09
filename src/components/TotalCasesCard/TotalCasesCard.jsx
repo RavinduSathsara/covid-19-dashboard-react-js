@@ -1,26 +1,26 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import DescriptionAlerts from "../DescriptionAlerts/DescriptionAlerts";
-import EcoTwoToneIcon from "@material-ui/icons/EcoTwoTone";
-import Title from "../Title/Title";
 
-function preventDefault(event) {
-  event.preventDefault();
-}
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Typography from "@material-ui/core/Typography";
+
+//
+import DescriptionAlerts from "../DescriptionAlerts/DescriptionAlerts";
+import CircularProgress from "../LinearDeterminate/LinearDeterminate";
 
 const useStyles = makeStyles({
-  depositContext: {
-    flex: 1,
-  },
-  sprinner: {
-    margin: "40px",
+  root: {
+    maxWidth: 345,
+    margin: " 7px 2px",
   },
 });
 
-export default function Deposits() {
+export default function TotalCasesCard() {
+  const classes = useStyles();
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState({
@@ -33,10 +33,8 @@ export default function Deposits() {
       local_new_deaths: 255553,
       local_recovered: 542688,
       local_active_cases: 11251,
-      total_pcr_testing_count: 5722835,
     },
   });
-  const classes = useStyles();
 
   // Note: the empty deps array [] means
   // this useEffect will run once
@@ -72,12 +70,25 @@ export default function Deposits() {
     );
   } else {
     return (
-      <React.Fragment>
-        <Title>Total Pcr Testing </Title>
-        <Typography component="p" variant="h5">
-          <EcoTwoToneIcon /> {items.data.total_pcr_testing_count}
-        </Typography>
-      </React.Fragment>
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            height="140"
+            image="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {items.data.local_total_cases}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Total Cases
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     );
   }
 }

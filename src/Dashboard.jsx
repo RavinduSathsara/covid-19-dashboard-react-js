@@ -19,6 +19,7 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+
 //components
 import {
   mainListItems,
@@ -27,6 +28,9 @@ import {
 import Chart from "./components/Chart/Chart";
 import CasesCard from "./components/CasesCard/CasesCard";
 import PcrTests from "./components/PcrTests/PcrTests";
+import TotalCasesCard from "./components/TotalCasesCard/TotalCasesCard";
+import TotalDeathsCard from "./components/TotalDeathsCard/TotalDeathsCard";
+import NewDeathsCard from "./components/NewDeathsCard/NewDeathsCard";
 
 function Copyright() {
   return (
@@ -46,6 +50,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
+    flexGrow: 1,
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -120,6 +125,10 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
+  cards: {
+    width: "340px",
+    margin: "20px",
+  },
 }));
 
 export default function Dashboard() {
@@ -163,7 +172,7 @@ export default function Dashboard() {
             Covid 19 Dashboard - Sri Lanka
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={0} color="secondary">
+            <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -231,6 +240,41 @@ export default function Dashboard() {
                 }
               />
             </Routes>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Grid container spacing={1}>
+                    <Grid item xs>
+                      <Paper className={classes.cards}>
+                        <TotalCasesCard />
+                      </Paper>
+                    </Grid>
+                    <Grid item xs>
+                      <Paper className={classes.cards}>
+                        <TotalDeathsCard />
+                      </Paper>
+                    </Grid>
+                    <Grid item xs>
+                      <Paper className={classes.cards}>
+                        <NewDeathsCard />
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                }
+              />
+            </Routes>
+            {/* <Grid>
+              <Grid container item xs={12} spacing={3}>
+                <LocalImgMediaCard />
+              </Grid>
+              <Grid container item xs={12} spacing={3}>
+                <LocalImgMediaCard />
+              </Grid>
+              <Grid container item xs={12} spacing={3}>
+                <LocalImgMediaCard />
+              </Grid>
+            </Grid> */}
             <Routes>
               <Route
                 path="/"
