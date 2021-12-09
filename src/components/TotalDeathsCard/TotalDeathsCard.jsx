@@ -86,6 +86,11 @@ export default function TotalDeathsCard() {
             <Typography variant="body2" color="textSecondary" component="p">
               Total Local Deaths
             </Typography>
+            <br />
+            <br />
+            <Typography variant="body2" color="textSecondary" component="p">
+              on {items.data.update_date_time}
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Card>

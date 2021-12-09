@@ -86,6 +86,11 @@ export default function TotalCasesCard() {
             <Typography variant="body2" color="textSecondary" component="p">
               Total Cases
             </Typography>
+            <br />
+            <br />
+            <Typography variant="body2" color="textSecondary" component="p">
+              on {items.data.update_date_time}
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
