@@ -34,6 +34,12 @@ export default function Deposits() {
       local_recovered: 542688,
       local_active_cases: 11251,
       total_pcr_testing_count: 5722835,
+      daily_pcr_testing_data: [
+        {
+          date: "2021-12-09",
+          pcr_count: "7580",
+        },
+      ],
     },
   });
   const classes = useStyles();
@@ -76,6 +82,14 @@ export default function Deposits() {
         <Title>Total Pcr Testing </Title>
         <Typography component="p" variant="h5">
           <EcoTwoToneIcon /> {items.data.total_pcr_testing_count}
+        </Typography>
+        <Title>Today Testing </Title>
+        <Typography component="p" variant="h5">
+          <EcoTwoToneIcon /> {items.data.daily_pcr_testing_data[0].pcr_count}
+        </Typography>
+
+        <Typography variant="body2" color="textSecondary" component="p">
+          on {items.data.update_date_time}
         </Typography>
       </React.Fragment>
     );
