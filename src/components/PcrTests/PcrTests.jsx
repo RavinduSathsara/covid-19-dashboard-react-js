@@ -157,12 +157,12 @@ export default function PcrTests() {
   } else {
     return (
       <React.Fragment>
-        <Title> Local Daily Pcr Testing</Title>
+        <Title> Local Daily PCR Testing</Title>
         <Table size="small">
           <TableHead>
             <TableRow>
               <TableCell>Date</TableCell>
-              <TableCell>Pcr count</TableCell>
+              <TableCell>PCR count</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

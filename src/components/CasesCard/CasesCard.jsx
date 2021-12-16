@@ -79,7 +79,7 @@ export default function Deposits() {
   } else {
     return (
       <React.Fragment>
-        <Title>Total Pcr Testing </Title>
+        <Title>Total PCR Testing </Title>
         <Typography component="p" variant="h5">
           <EcoTwoToneIcon /> {items.data.total_pcr_testing_count}
         </Typography>
