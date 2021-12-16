@@ -86,13 +86,13 @@ export default function Chart() {
   const saturday = items.data.daily_pcr_testing_data[5].pcr_count;
   const sunday = items.data.daily_pcr_testing_data[6].pcr_count;
   const data = [
-    createData("Monday", monday),
-    createData("Tuesday", tuesday),
-    createData("Wednesday", wednesday),
-    createData("Thursday", thursday),
-    createData("Friday", friday),
-    createData("Saturday", saturday),
-    createData("Sunday", sunday),
+    createData("Mon", monday),
+    createData("Tue", tuesday),
+    createData("Wed", wednesday),
+    createData("Thu", thursday),
+    createData("Fri", friday),
+    createData("Sat", saturday),
+    createData("Sun", sunday),
     createData("", undefined),
   ];
 
