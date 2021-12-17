@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cards: {
     width: "340px",
-    margin: "2px",
+    margin: "5px",
   },
 }));
 
@@ -240,6 +240,7 @@ export default function Dashboard() {
                 }
               />
             </Routes>
+            <hr />
             <Routes>
               <Route
                 path="/"
@@ -275,6 +276,7 @@ export default function Dashboard() {
                 <LocalImgMediaCard />
               </Grid>
             </Grid> */}
+            <hr />
             <Routes>
               <Route
                 path="/"

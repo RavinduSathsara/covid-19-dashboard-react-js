@@ -14,7 +14,6 @@ import CircularProgress from "../LinearDeterminate/LinearDeterminate";
 
 const useStyles = makeStyles({
   root: {
-    color: "blue",
     flex: 1,
     maxWidth: 345,
     // margin: " 7px ",
