@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cards: {
     width: "340px",
-    margin: "20px",
+    margin: "2px",
   },
 }));
 

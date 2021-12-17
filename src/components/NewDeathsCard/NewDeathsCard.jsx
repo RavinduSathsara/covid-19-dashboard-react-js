@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import Badge from "@material-ui/core/Badge";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -14,8 +14,14 @@ import CircularProgress from "../LinearDeterminate/LinearDeterminate";
 
 const useStyles = makeStyles({
   root: {
+    color: "blue",
+    flex: 1,
     maxWidth: 345,
-    margin: " 7px 2px",
+    // margin: " 7px ",
+  },
+
+  sprinner: {
+    margin: "40px",
   },
 });
 
@@ -83,7 +89,8 @@ export default function NewDeathsCard() {
             <Typography gutterBottom variant="h5" component="h2">
               {items.data.local_new_deaths}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+
+            <Typography variant="body2" color="textSecondary" component="h1">
               Local New Deaths
             </Typography>
             <br />
