@@ -41,7 +41,12 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <ListItemText
+        onClick={() => {
+          alert("This feature is not available yet");
+        }}
+        primary="Last month"
+      />
     </ListItem>
   </div>
 );
