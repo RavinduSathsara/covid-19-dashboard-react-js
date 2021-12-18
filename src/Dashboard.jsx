@@ -31,6 +31,7 @@ import PcrTests from "./components/PcrTests/PcrTests";
 import TotalCasesCard from "./components/TotalCasesCard/TotalCasesCard";
 import TotalDeathsCard from "./components/TotalDeathsCard/TotalDeathsCard";
 import NewDeathsCard from "./components/NewDeathsCard/NewDeathsCard";
+import CustomizedTables from "./components/CustomizedTables/CustomizedTables";
 
 function Copyright() {
   return (
@@ -282,8 +283,9 @@ export default function Dashboard() {
                 path="/"
                 element={
                   <Grid item xs={12}>
-                    <Paper className={classes.paper}>
-                      <PcrTests />
+                    <Paper>
+                      {/* <PcrTests /> */}
+                      <CustomizedTables />
                     </Paper>
                   </Grid>
                 }
