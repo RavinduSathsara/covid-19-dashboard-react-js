@@ -178,12 +178,16 @@ export default function CustomizedTables() {
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
+              <StyledTableCell>#</StyledTableCell>
               <StyledTableCell>Date</StyledTableCell>
               <StyledTableCell>PCR count</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                1
+              </StyledTableCell>
               <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[0].date}
               </StyledTableCell>
@@ -193,6 +197,9 @@ export default function CustomizedTables() {
             </StyledTableRow>
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
+                2
+              </StyledTableCell>
+              <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[1].date}
               </StyledTableCell>
               <StyledTableCell>
@@ -200,6 +207,9 @@ export default function CustomizedTables() {
               </StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                3
+              </StyledTableCell>
               <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[2].date}
               </StyledTableCell>
@@ -209,6 +219,9 @@ export default function CustomizedTables() {
             </StyledTableRow>
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
+                4
+              </StyledTableCell>
+              <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[3].date}
               </StyledTableCell>
               <StyledTableCell>
@@ -216,6 +229,9 @@ export default function CustomizedTables() {
               </StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                5
+              </StyledTableCell>
               <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[4].date}
               </StyledTableCell>
@@ -225,6 +241,9 @@ export default function CustomizedTables() {
             </StyledTableRow>
             <StyledTableRow>
               <StyledTableCell component="th" scope="row">
+                6
+              </StyledTableCell>
+              <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[5].date}
               </StyledTableCell>
               <StyledTableCell>
@@ -232,6 +251,9 @@ export default function CustomizedTables() {
               </StyledTableCell>
             </StyledTableRow>
             <StyledTableRow>
+              <StyledTableCell component="th" scope="row">
+                7
+              </StyledTableCell>
               <StyledTableCell component="th" scope="row">
                 {items.data.daily_pcr_testing_data[6].date}
               </StyledTableCell>

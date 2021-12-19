@@ -266,17 +266,6 @@ export default function Dashboard() {
                 }
               />
             </Routes>
-            {/* <Grid>
-              <Grid container item xs={12} spacing={3}>
-                <LocalImgMediaCard />
-              </Grid>
-              <Grid container item xs={12} spacing={3}>
-                <LocalImgMediaCard />
-              </Grid>
-              <Grid container item xs={12} spacing={3}>
-                <LocalImgMediaCard />
-              </Grid>
-            </Grid> */}
             <hr />
             <Routes>
               <Route
