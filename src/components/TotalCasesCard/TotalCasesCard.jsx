@@ -80,10 +80,10 @@ export default function TotalCasesCard() {
             title="Contemplative Reptile"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h4" component="h2">
               {items.data.local_total_cases}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body" color="textSecondary" component="h2">
               Total Cases
             </Typography>
             <br />

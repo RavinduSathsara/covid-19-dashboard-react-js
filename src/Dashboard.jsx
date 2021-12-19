@@ -130,6 +130,12 @@ const useStyles = makeStyles((theme) => ({
     width: "340px",
     margin: "5px",
   },
+  pcrTable: {
+    position: "relative",
+    display: "flex",
+    overflow: "auto",
+    flexDirection: "column",
+  },
 }));
 
 export default function Dashboard() {
@@ -272,7 +278,7 @@ export default function Dashboard() {
                 path="/"
                 element={
                   <Grid item xs={12}>
-                    <Paper>
+                    <Paper className={classes.pcrTable}>
                       {/* <PcrTests /> */}
                       <CustomizedTables />
                     </Paper>

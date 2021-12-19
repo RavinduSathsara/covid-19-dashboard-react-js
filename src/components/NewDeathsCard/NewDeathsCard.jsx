@@ -85,11 +85,11 @@ export default function NewDeathsCard() {
             title="Contemplative Reptile"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h4" component="h2">
               {items.data.local_new_deaths}
             </Typography>
 
-            <Typography variant="body2" color="textSecondary" component="h1">
+            <Typography variant="body" color="textSecondary" component="h2">
               Local New Deaths
             </Typography>
             <br />
