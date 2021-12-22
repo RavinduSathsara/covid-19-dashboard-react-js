@@ -167,19 +167,13 @@ export default function PcrTests() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>
-                {" "}
-                {items.data.daily_pcr_testing_data[0].date}
-              </TableCell>
+              <TableCell>{items.data.daily_pcr_testing_data[0].date}</TableCell>
               <TableCell>
                 {items.data.daily_pcr_testing_data[0].pcr_count}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>
-                {" "}
-                {items.data.daily_pcr_testing_data[1].date}
-              </TableCell>
+              <TableCell>{items.data.daily_pcr_testing_data[1].date}</TableCell>
               <TableCell>
                 {items.data.daily_pcr_testing_data[1].pcr_count}
               </TableCell>
