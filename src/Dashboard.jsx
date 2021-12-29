@@ -19,7 +19,7 @@ import Link from "@material-ui/core/Link";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-
+import Swal from "sweetalert2";
 //components
 import {
   mainListItems,
@@ -138,6 +138,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const showAlert = () => {
+  Swal.fire("The Notification?", "That thing is still not working", "warning");
+};
+
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -178,7 +182,7 @@ export default function Dashboard() {
           >
             Covid 19 Dashboard - Sri Lanka
           </Typography>
-          <IconButton color="inherit">
+          <IconButton onClick={showAlert} color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>

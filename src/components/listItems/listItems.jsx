@@ -7,6 +7,8 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 
+import Swal from "sweetalert2";
+
 import { Link } from "react-router-dom";
 export const mainListItems = (
   <div>
@@ -43,7 +45,11 @@ export const secondaryListItems = (
       </ListItemIcon>
       <ListItemText
         onClick={() => {
-          alert("This feature is not available yet");
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
         }}
         primary="Last month"
       />
