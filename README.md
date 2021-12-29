@@ -1,5 +1,3 @@
-### Try App : https://covid-19-dashboard-sri-lanka.herokuapp.com/
-
 ### Hi there, I'm Ravindu Sathsara
 
 ## I'm a Student and Developer!!
