@@ -139,7 +139,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const showAlert = () => {
-  Swal.fire("The Notification?", "That thing is still not working", "warning");
+  Swal.fire(
+    "The Notification?",
+    "That thing is still not working yet",
+    "warning"
+  );
 };
 
 export default function Dashboard() {
