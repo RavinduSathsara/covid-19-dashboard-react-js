@@ -7,10 +7,6 @@ import DescriptionAlerts from "../DescriptionAlerts/DescriptionAlerts";
 import EcoTwoToneIcon from "@material-ui/icons/EcoTwoTone";
 import Title from "../Title/Title";
 
-function preventDefault(event) {
-  event.preventDefault();
-}
-
 const useStyles = makeStyles({
   depositContext: {
     flex: 1,

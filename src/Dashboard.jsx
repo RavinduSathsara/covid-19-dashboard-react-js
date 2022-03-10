@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Route, Routes } from "react-router";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import axios from "axios";
 import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
@@ -138,17 +139,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const showAlert = () => {
-  Swal.fire(
-    "The Notification?",
-    "That thing is still not working yet",
-    "warning"
-  );
-};
-
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  const [showAlert, setShowAlert] = useState("");
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -156,6 +150,20 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  useEffect(() => {
+    axios
+      .get("https://www.hpb.health.gov.lk/api/get-current-statistical", {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      })
+      .then((res) => setShowAlert(res.data.data.global_deaths))
+      .catch((err) => console.log(err));
+  }, []);
+
+  const showAlertFun = () => {
+    Swal.fire("Global Deaths !", `  ${showAlert}`, "warning");
+  };
 
   return (
     <div className={classes.root}>
@@ -186,8 +194,8 @@ export default function Dashboard() {
           >
             Covid 19 Dashboard - Sri Lanka
           </Typography>
-          <IconButton onClick={showAlert} color="inherit">
-            <Badge badgeContent={4} color="secondary">
+          <IconButton onClick={showAlertFun} color="inherit">
+            <Badge badgeContent={1} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
