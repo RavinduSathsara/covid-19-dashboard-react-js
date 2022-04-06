@@ -1,13 +1,6 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
-import Dashboard from "./Dashboard";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-import "@fontsource/roboto";
-ReactDOM.render(
-  <BrowserRouter>
-    <Dashboard />
-  </BrowserRouter>,
-
-  document.getElementById("root")
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
