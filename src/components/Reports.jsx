@@ -6,48 +6,78 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Title from "./Title";
+import { useState } from "react";
+import IconButton from "@mui/material/IconButton";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { Grid, Tooltip } from "@mui/material";
+import { CSVLink, CSVDownload } from "react-csv";
 
 export default function Reports({ pcrs, totalPcrs }) {
-  // Generate Order Data
-  function createData(id, date, pcrs, totals) {
-    return { id, date, pcrs, totals };
-  }
+  const [showCount, setShowCount] = useState(10);
+  const rows = [];
 
-  const rows = [
-    createData(0, pcrs[0].date, pcrs[0].pcr_count, pcrs[0].pcr_count),
-    createData(1, pcrs[1].date, pcrs[1].pcr_count, pcrs[1].pcr_count),
-    createData(2, pcrs[2].date, pcrs[2].pcr_count, pcrs[2].pcr_count),
-    createData(3, pcrs[3].date, pcrs[3].pcr_count, pcrs[3].pcr_count),
-    createData(4, pcrs[4].date, pcrs[4].pcr_count, pcrs[4].pcr_count),
-    createData(5, pcrs[5].date, pcrs[5].pcr_count, pcrs[5].pcr_count),
-    createData(6, pcrs[6].date, pcrs[6].pcr_count, pcrs[6].pcr_count),
-    createData(7, pcrs[7].date, pcrs[7].pcr_count, pcrs[7].pcr_count),
-  ];
+  pcrs?.map((item) =>
+    rows.push({
+      id: Math.random(),
+      date: item?.date,
+      pcrs: item?.pcr_count,
+      pcrs: item?.pcr_count,
+    })
+  );
 
   function preventDefault(event) {
     event.preventDefault();
   }
-  console.log(totalPcrs);
+
   return (
     <React.Fragment>
-      <Title>PCR Reports</Title>
+      <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <Title>PCR Reports</Title>
+        </Grid>
+        <Grid item xs={4}>
+          <CSVLink data={pcrs}>Download pcrs</CSVLink>
+        </Grid>
+      </Grid>
+
       <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
             <TableCell>PCR Tets</TableCell>
-            <TableCell align="right">Total tests</TableCell>
+            <TableCell>Total tests</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.pcrs}</TableCell>
-              <TableCell align="right">{totalPcrs - row.totals}</TableCell>
+          {rows?.slice(0, showCount).map((row) => (
+            <TableRow key={row?.id}>
+              <TableCell>{row?.date}</TableCell>
+              <TableCell>{row?.pcrs}</TableCell>
+              <TableCell>{totalPcrs - row?.totals}</TableCell>
             </TableRow>
           ))}
         </TableBody>
+        <Grid margin={1}>
+          <Tooltip title="Show more">
+            <IconButton
+              onClick={() => {
+                setShowCount(showCount + 10);
+              }}
+            >
+              <MoreHorizIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Show less">
+            <IconButton
+              color="error"
+              onClick={() => {
+                setShowCount(10);
+              }}
+            >
+              <MoreHorizIcon />
+            </IconButton>
+          </Tooltip>
+        </Grid>
       </Table>
     </React.Fragment>
   );
